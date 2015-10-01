@@ -23,6 +23,13 @@ namespace EmployeeTestApp
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            //bundles.Add(new ScriptBundle("~/bundles/angularApp").IncludeDirectory(
+            //          "~/app", "*.js", true));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
+                      "~/app/app.js",
+                      "~/app/controllers/EmployeeCtrl.js"));
         }
     }
 }

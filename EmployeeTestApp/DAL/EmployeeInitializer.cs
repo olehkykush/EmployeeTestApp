@@ -7,7 +7,7 @@ using EmployeeTestApp.Models;
 
 namespace EmployeeTestApp.DAL
 {
-    public class EmployeeInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<EmployeeContext>
+    public class EmployeeInitializer : System.Data.Entity.DropCreateDatabaseAlways<EmployeeContext>
     {
         protected override void Seed(EmployeeContext context)
         {
@@ -25,7 +25,7 @@ namespace EmployeeTestApp.DAL
             new Employee{FirstMidName="Meredith",LastName="Alonso", CompanyID=1},
             new Employee{FirstMidName="Arturo",LastName="Anand", CompanyID=1},
             new Employee{FirstMidName="Gytis",LastName="Barzdukas", CompanyID=2},
-            new Employee{FirstMidName="Gytis",LastName="Li", CompanyID=3}
+            new Employee{FirstMidName="Wo",LastName="Li", CompanyID=3}
             };
 
             employees.ForEach(e => context.Employees.Add(e));
