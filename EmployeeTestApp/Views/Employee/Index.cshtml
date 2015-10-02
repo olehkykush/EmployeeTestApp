@@ -31,7 +31,7 @@
             </td>
             <td>
                 <a ng-click="showEditForm(true, employee)"><span class="glyphicon glyphicon-cog"></span></a> |
-                <a ng-click="deleteEmployee(employee.EmployeeID)"><span class="glyphicon glyphicon-trash"></span></a>
+                <a ng-click="deleteEmployee(employee)"><span class="glyphicon glyphicon-trash"></span></a>
             </td>
         </tr>
         <tr ng-if="model.Employees.lenght == 0">
@@ -45,7 +45,7 @@
                 <input type="text" class="form-control" placeholder="First Name" ng-model="newEmployee.FirstMidName"/>
             </td>
             <td>
-                <input type="text" class="form-control" placeholder="Company" ng-model="newEmployee.CompanyId"/>
+                <input type="text" class="form-control" placeholder="CompanyID" ng-model="newEmployee.CompanyId"/>
             </td>
             <td>
                 <button type="button" class="btn btn-primary" ng-click="addEmployee()">Add</button>
@@ -60,7 +60,7 @@
                 <input type="text" class="form-control" placeholder="First Name" ng-model="editedEmployee.FirstMidName"/>
             </td>
             <td>
-                <input type="text" class="form-control" placeholder="Company" ng-model="editedEmployee.Company.CompanyID" disabled/>
+                <input type="text" class="form-control" placeholder="CompanyID" ng-model="editedEmployee.Company.CompanyID" disabled/>
             </td>
             <td>
                 <button type="button" class="btn btn-primary" ng-click="editEmployee(editedEmployee)">Save</button>
